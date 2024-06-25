@@ -95,6 +95,9 @@ class MainInfo extends StatelessWidget {
           decoration: BoxDecoration(
             color: theme.colorScheme.primary,
             shape: BoxShape.circle,
+            image: const DecorationImage(
+              image: AssetImage("assets/photos/main.png"),
+            ),
           ),
         ),
       ],

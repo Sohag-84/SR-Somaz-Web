@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:sr_somaz_web/config/image_list.dart';
 
 import 'package:sr_somaz_web/widgets/main_info.dart';
 import 'package:sr_somaz_web/widgets/my_divider.dart';
@@ -49,10 +50,12 @@ class WebHomePage extends StatelessWidget {
               const Gap(40),
               const MyDivider(),
               const Gap(40),
+
+              ///features
               Text(
                 "Features",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
                   color: theme.colorScheme.onSurface,
                 ),
@@ -92,6 +95,39 @@ class WebHomePage extends StatelessWidget {
                         "SR Somaz is a easy to use app where you can connect with each other",
                   ),
                 ],
+              ),
+              const Gap(80),
+              const MyDivider(),
+              const Gap(40),
+
+              ///app screen shorts
+              Text(
+                "App ScreenShorts",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: theme.colorScheme.onSurface,
+                ),
+              ),
+              const Gap(40),
+              SizedBox(
+                height: 500,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 500,
+                      width: 300,
+                      margin: const EdgeInsets.only(right: 10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        image: DecorationImage(
+                          image: AssetImage(imageList[index]),
+                        ),
+                      ),
+                    );
+                  },
+                ),
               ),
             ],
           ),

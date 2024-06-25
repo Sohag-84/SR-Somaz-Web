@@ -27,14 +27,15 @@ class WebFeatureContainer extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            height: 100,
-            width: 100,
+            height: w * .08,
+            width: w * .08,
             padding: const EdgeInsets.all(20),
+            alignment: Alignment.center,
             decoration: BoxDecoration(
               color: Colors.blue,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Icon(icon, size: 50),
+            child: Icon(icon, size: w * .03),
           ),
           const Gap(10),
           Expanded(
